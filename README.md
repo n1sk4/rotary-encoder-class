@@ -1,5 +1,5 @@
 # rotary-encoder-class
-Rotary encoder class in C++ // with comments
+Rotary encoder class in C++ 
 
 Basic steper rotary encoder with two interrupts.
 
