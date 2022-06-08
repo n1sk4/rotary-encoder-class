@@ -26,9 +26,13 @@ Basic data:
 KY-040 encoder form Handson Technology
 --------------------------------------
 ![](https://os.mbed.com/media/uploads/nikizg/ky-40.png)
-
-
-
+<pre>
+* **DT**  - Pin A  (*Digital input with interrupt*)
+* **CLK** - Pin B (*Digital input*)
+* **SW**  - Pin SW (*Digital input*)
+* **+**   - 3.3V DC
+* **GND** - GND
+</pre>
 This image shows the pulses behavior of an incremental encoder
 --------------------------------------------------------------
 ![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
@@ -42,12 +46,21 @@ Wiring diagram
 ****
 ![](https://os.mbed.com/media/platforms/lpc1768_pinout.png)
 
+Following the microcontroller Mbed LPC1768 diagram and KY-040 incremental encoder 
+diagram we can connect the wiring:
+ * Pin p5 -> DT
+ * Pin p6 -> CLK
+ * Pin p7 -> Switch *(optional)*
+ 
+ 
 Code example
 ------------
 <pre>
 #include "RotaryEncoder.h"
  
 AnalogOut led(LED1);                        //Integrated LED
+//DigitalIn sw(p7);                         //Switch (optional)
+
 RotaryEncoder re(p5, p6);                   // Default
 //RotaryEncoder re(p5, p6, PullDown);       // With pull mode specified
 //RotaryEncoder re(p5, p6, p7);             // With Switch
