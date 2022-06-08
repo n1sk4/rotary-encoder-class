@@ -23,4 +23,10 @@ Basic data:
 - Pulses per 360° rotation: 20
 - Built in push button
 
+KY-040 encoder form Handson Technology
+--------------------------------------
 ![](https://os.mbed.com/media/uploads/nikizg/ky-40.png)
+
+This image shows the pulses behavior of an incremental encoder
+--------------------------------------------------------------
+![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
