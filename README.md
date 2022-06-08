@@ -2,6 +2,8 @@
 
 About
 ===========================
+This class was created for use with fast prototyping with Mbed platform in mind
+and the target microcontroller was NXP LPC1768.
 Basic steper rotary encoder with two interrupts.
 
 *Original project: [Rotary encoder class](https://os.mbed.com/users/nikizg/code/RotaryEncoder/)*
@@ -29,11 +31,20 @@ This image shows the pulses behavior of an incremental encoder
 --------------------------------------------------------------
 ![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
 
-Code example
+Mini project
 ===========================
+Changing the brightness of an integrated LED and posting messages to serial PC connection
+
+Wiring diagram
+--------------
+![](https://os.mbed.com/media/platforms/lpc1768_pinout.png)
+
+Code example
+------------
 <pre>
 #include "RotaryEncoder.h"
  
+AnalogOut led(LED1);                        //Integrated LED
 RotaryEncoder re(p5, p6);                   // Default
 //RotaryEncoder re(p5, p6, PullDown);       // With pull mode specified
 //RotaryEncoder re(p5, p6, p7);             // With Switch
@@ -46,6 +57,7 @@ int main(){
   pc.printf("\nEncoder program started!");
   while(1){
     if(value!=re.Value){
+      led.write(re.Value);
       pc.printf("\nEncoder value is: %2.f", re.Value);
       value = re.Value;
     }
