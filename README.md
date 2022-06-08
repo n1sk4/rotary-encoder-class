@@ -28,3 +28,26 @@ KY-040 encoder form Handson Technology
 This image shows the pulses behavior of an incremental encoder
 --------------------------------------------------------------
 ![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
+
+Code example
+===========================
+  `#include "RotaryEncoder.h"
+ 
+  RotaryEncoder re(p5, p6);                   // Default
+  //RotaryEncoder re(p5, p6, PullDown);       // With pull mode specified
+  //RotaryEncoder re(p5, p6, p7);             // With Switch
+  //RotaryEncoder re(p5, p6, p7, PullDown);   // Switch + pull mode specified
+ 
+  Serial pc(USBTX, USBRX);                    // Serial PC connection
+ 
+  int main(){
+   double value = re.Value;
+   pc.printf("\nEncoder program started!");
+   while(1){
+       if(value!=re.Value){
+           pc.printf("\nEncoder value is: %2.f", re.Value);
+           value = re.Value;
+       }
+       wait_ms(1000);
+   }
+  }`
