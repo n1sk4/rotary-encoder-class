@@ -10,7 +10,7 @@ Basic steper rotary encoder with two interrupts.
 
 Rotary encoder
 ===========================
-This electronic component is used to sense the rotational movement that is converted into series of pulses.
+This electro-mechanic component is used to sense the rotational movement that is converted into series of pulses.
 There are two types of rotary encoders: Absolute and incremental. Absolute knows at which perticular angle 
 it's set and the incremental can only add or subcract it's value that must be stored somewhere.
 The class is based on an incremental type of rotary encoder that uses three pins for rotary movement and one for the switch.
@@ -34,9 +34,15 @@ KY-040 encoder form Handson Technology
 * **GND** - GND
 
 
-This image shows the pulses behavior of an incremental encoder
+Working principles of an rotary incremental encoder
 --------------------------------------------------------------
-![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
+![](https://ars.els-cdn.com/content/image/3-s2.0-B9780124201651000214-f21-08-9780124201651.jpg)
+
+*The relative phase of the A and B pulses determines whether the encoder is rotating clockwise or counterclockwise. A rising edge on B after a rising edge on A means the encoder is rotating one way, and a rising edge on B after a falling edge on A means the encoder is rotating the opposite direction. A rising edge on B followed by a falling edge on B (with no change in A) means that the encoder has undergone no net motion. The out-of-phase A and B pulse trains are known as quadrature signals.
+
+In addition to determining the rotation direction, the pulses can be counted to determine how far the encoder has rotated. The encoder signals can be “decoded” at 1x, 2x, or 4x resolution, where 1x resolution means that a single count is generated for each full cycle of A and B (e.g., on the rising edge of A), 2x resolution means that two counts are generated for each full cycle (e.g., on the rising and falling edges of A), and 4x means that a count is generated for every rising and falling edge of A and B (four counts per cycle, Figure 21.9). Thus an encoder with “100 lines” or “100 pulses per revolution” can be used to generate up to 400 counts per revolution of the encoder. If the encoder is attached to a motor shaft, and the motor shaft is also attached to a 20:1 speed-reducing gearhead, then the encoder generates 400 × 20 = 8000 counts per revolution of the gearhead output shaft...*
+
+**SOURCE:** [Current Advances in Mechanical Design and Production VII, 2000](https://www.sciencedirect.com/topics/engineering/incremental-encoder) 
 
 Mini project
 ===========================
