@@ -27,6 +27,8 @@ KY-040 encoder form Handson Technology
 --------------------------------------
 ![](https://os.mbed.com/media/uploads/nikizg/ky-40.png)
 
+
+
 This image shows the pulses behavior of an incremental encoder
 --------------------------------------------------------------
 ![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
@@ -37,6 +39,7 @@ Changing the brightness of an integrated LED and posting messages to serial PC c
 
 Wiring diagram
 --------------
+****
 ![](https://os.mbed.com/media/platforms/lpc1768_pinout.png)
 
 Code example
