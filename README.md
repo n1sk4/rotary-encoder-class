@@ -26,13 +26,14 @@ Basic data:
 KY-040 encoder form Handson Technology
 --------------------------------------
 ![](https://os.mbed.com/media/uploads/nikizg/ky-40.png)
-<pre>
+
 * **DT**  - Pin A  (*Digital input with interrupt*)
 * **CLK** - Pin B (*Digital input*)
 * **SW**  - Pin SW (*Digital input*)
 * **+**   - 3.3V DC
 * **GND** - GND
-</pre>
+
+
 This image shows the pulses behavior of an incremental encoder
 --------------------------------------------------------------
 ![](http://www.industrial-electronics.com/DAQ/images/10_110.jpg)
@@ -77,6 +78,9 @@ int main(){
       pc.printf("\nEncoder value is: %2.f", re.Value);
       value = re.Value;
     }
+    //if(sw){
+    //  value = 0.0;
+    //}
     wait_ms(1000);
   }
 }
