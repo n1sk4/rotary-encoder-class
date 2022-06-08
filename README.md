@@ -23,4 +23,4 @@ Basic data:
 - Pulses per 360° rotation: 20
 - Built in push button
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](https://os.mbed.com/media/uploads/nikizg/ky-40.png)
+![](https://os.mbed.com/media/uploads/nikizg/ky-40.png)
