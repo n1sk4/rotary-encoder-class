@@ -31,7 +31,7 @@ This image shows the pulses behavior of an incremental encoder
 
 Code example
 ===========================
-`<pre>
+<pre>
   #include "RotaryEncoder.h"
  
   RotaryEncoder re(p5, p6);                   // Default
@@ -52,4 +52,4 @@ Code example
        wait_ms(1000);
    }
   }
-  </pre>`
+  </pre>
