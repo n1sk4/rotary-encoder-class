@@ -58,6 +58,7 @@ diagram we can connect the wiring:
  * Pin p5 -> DT
  * Pin p6 -> CLK
  * Pin p7 -> Switch *(optional)*
+ * GND -> GND
  
  
 Code example
